@@ -1,0 +1,19 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+	<div class="form-group">
+	  <label
+	  	class="control-label"
+	    for="detail-form-element-{{vm.element.property}}"
+	    translate>
+	    {{vm.element.title}}
+	  </label>
+	  <div>
+		  <select
+		    id="detail-form-element-{{vm.element.key}}"
+		    class="form-control"
+		    ng-model="vm.model"
+		    ng-options="item.id as item.name|translate for item in vm.collection">
+		    <option value="">–</option>
+		  </select>
+	  </div>
+	</div>
+</div>

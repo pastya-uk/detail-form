@@ -1,0 +1,17 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+	<div class="form-group">
+	  <label
+	    for="detail-form-element-{{vm.element.property}}"
+	    translate>
+	    {{vm.element.title}}
+	  </label>
+		<div>
+		  <input
+		    id="detail-form-element-{{vm.element.property}}"
+		    type="text"
+		    class="form-control"
+		    ng-model="vm.model"
+		    ng-change="vm.onTextChange()">
+	   </div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<!-- date-range filter element -->
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+	<div class="form-group">
+    <label
+    	class="control-label"
+      for="detail-form-element-{{vm.element.property}}"
+      translate>{{vm.element.title}}</label>
+	  <div>
+	    <div class="onoffswitch">
+	        <input type="checkbox"
+	               name="detail-form-element-{{vm.element.property}}"
+	               class="onoffswitch-checkbox"
+	               id="detail-form-element-{{vm.element.property}}"
+	               ng-model="vm.model"/>
+	        <label class="onoffswitch-label" for="detail-form-element-{{vm.element.property}}">
+	            <span class="onoffswitch-inner" 
+	            			title-on="{{'widgets.autotrade.on' | translate}}" 
+	            			title-off="{{'widgets.autotrade.off' | translate}}"></span>
+	            <span class="onoffswitch-switch"></span>
+	            {{widgets.autotrade.on | translate}}
+	        </label>
+	    </div>
+	  </div>
+	</div>
+</div>

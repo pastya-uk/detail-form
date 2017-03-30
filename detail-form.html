@@ -1,0 +1,36 @@
+<div class="detail-form row">
+  <div class="col-xs-12">
+    <div class="box box-primary">
+      <div class="box-header" 
+      		 ng-if="vm.showHeader" 
+      		 ng-class="{true: 'with-border', false: 'without-border'}[vm.showBorder == 'true']">
+        <h3 class="box-title" translate>
+          {{vm.title}}
+        </h3>
+      </div>
+      <form novalidate>
+	      <div class="box-body box-thinPad">
+		      <detail-form-element
+		        ng-repeat="element in vm.elements"
+		        class="detail-form-element-container {{element.property}} {{element.type}}"
+		        element="element"
+		        collection="vm.collections[element.config.values]"
+		        model="vm.model[element.property]"
+		        currency="vm.model[element.config.currency]"
+		        mandatory="element.required">
+		      </detail-form-element>
+	      </div>
+	      <div class="box-footer">
+	         <a ng-click="vm.submit()"
+	            class="btn btn-primary"
+	            ng-class="{'disabled': vm.disabled}"
+	            translate>buttons.save_changes</a>
+	         <a ng-click="vm.resetFilters()"
+	            class="btn btn-default"
+	            ng-class="{'disabled': vm.disabled}"
+	            translate>buttons.reset_form</a>
+	      </div>
+	    </form>
+    </div>
+  </div>
+</div>

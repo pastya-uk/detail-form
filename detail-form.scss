@@ -1,0 +1,14 @@
+.detail-form {
+  padding: 0px !important;
+  margin: 0px !important;
+
+  > div[class*='col-'] {
+    padding: 0px !important;
+  }
+}
+
+detail-form-element {
+  > div[class*='col-'] {
+    padding: 10px;
+  }
+}

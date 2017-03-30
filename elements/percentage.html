@@ -1,0 +1,25 @@
+<!-- number-range filter element -->
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+	<div class="form-group">
+	  <label
+	  	class="control-label"
+	    for="detail-form-element-{{vm.element.property}}"
+	    translate>
+	    {{vm.element.title}}
+	  </label>
+	
+	  <div class="input-group">
+	    <input
+	      type="number"
+	      id="filter-{{vm.element.property}}"
+	      class="form-control"
+	      min="{{vm.element.config.min}}"
+	      max="{{vm.element.config.max}}"
+	      placeholder="{{'placeholders.minimum' | translate}}"
+	      ng-model="vm.model"
+	      ng-model-options="{ updateOn: 'default blur' }"
+	      ng-change="vm.onPercentageChange()">
+	    <span class="input-group-addon">%</span>
+	  </div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+	<div class="radio-group form-group">
+    <label
+    	class="control-label"
+      for="detail-form-element-{{vm.element.property}}"
+      translate>
+      {{vm.element.title}}
+    </label>
+	  <div class="radio-buttons">
+	    <radio-button
+	      ng-model="vm.model"
+	      ng-value="{{item.id}}"
+	      ng-repeat="item in vm.collection">
+	      {{item.name | translate}}
+	    </radio-button>
+	  </div>
+	</div>
+</div>
